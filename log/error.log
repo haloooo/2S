@@ -1,0 +1,1884 @@
+2018-07-16 21:39:04,292 - Not Found: /favicon.ico
+2018-07-16 21:39:17,175 - Not Found: /WarningDetail.html
+2018-08-16 14:36:25,486 - Not Found: /favicon.ico
+2018-08-30 13:14:16,000 - Not Found: /initData
+2018-08-30 14:24:03,990 - Not Found: /favicon.ico
+2018-08-30 14:24:51,060 - Not Found: /favicon.ico
+2018-08-30 14:25:24,377 - Not Found: /favicon.ico
+2018-08-30 14:27:38,186 - Not Found: /favicon.ico
+2018-08-31 08:57:33,853 - Not Found: /favicon.ico
+2018-08-31 08:58:55,755 - Not Found: /favicon.ico
+2018-08-31 08:59:05,842 - Not Found: /favicon.ico
+2018-08-31 09:09:51,512 - Not Found: /favicon.ico
+2018-08-31 09:09:53,115 - Internal Server Error: /get_models
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 16, in get_models
+    result = model_homePage.get_models()
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 22, in get_models
+    process_cd = item["PROCESS"][0]
+KeyError: 'PROCESS'
+2018-08-31 09:33:19,306 - Not Found: /favicon.ico
+2018-08-31 09:34:47,739 - Not Found: /favicon.ico
+2018-08-31 09:44:35,458 - Not Found: /favicon.ico
+2018-08-31 10:01:18,330 - Not Found: /favicon.ico
+2018-08-31 10:17:34,728 - Not Found: /favicon.ico
+2018-08-31 10:33:47,861 - Not Found: /favicon.ico
+2018-08-31 10:34:21,138 - Not Found: /favicon.ico
+2018-08-31 10:35:52,847 - Not Found: /favicon.ico
+2018-08-31 10:36:45,803 - Not Found: /favicon.ico
+2018-08-31 10:39:48,863 - Not Found: /favicon.ico
+2018-08-31 10:40:11,573 - Not Found: /favicon.ico
+2018-08-31 10:48:14,681 - Not Found: /favicon.ico
+2018-08-31 10:49:03,548 - Not Found: /favicon.ico
+2018-08-31 10:51:33,645 - Not Found: /favicon.ico
+2018-08-31 10:52:42,902 - Not Found: /favicon.ico
+2018-08-31 10:54:12,050 - Not Found: /favicon.ico
+2018-08-31 10:55:41,734 - Not Found: /favicon.ico
+2018-08-31 10:57:35,374 - Not Found: /favicon.ico
+2018-08-31 10:58:06,742 - Not Found: /favicon.ico
+2018-08-31 11:00:56,270 - Internal Server Error: /get_dataList
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 60, in get_dataList
+    result = model_homePage.getDataList(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 12, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 133, in getDetailList
+    connections[model_name].close()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 196, in __getitem__
+    if hasattr(self._connections, alias):
+TypeError: hasattr(): attribute name must be string
+2018-08-31 11:03:10,828 - Not Found: /favicon.ico
+2018-08-31 11:12:58,063 - Not Found: /favicon.ico
+2018-08-31 11:13:46,798 - Not Found: /favicon.ico
+2018-08-31 13:22:39,614 - Not Found: /favicon.ico
+2018-08-31 13:36:11,622 - Not Found: /favicon.ico
+2018-08-31 13:54:55,408 - Not Found: /favicon.ico
+2018-08-31 13:55:48,063 - Not Found: /favicon.ico
+2018-08-31 14:07:51,524 - Not Found: /favicon.ico
+2018-08-31 14:09:20,390 - Not Found: /favicon.ico
+2018-08-31 14:09:27,360 - Not Found: /favicon.ico
+2018-08-31 14:09:43,881 - Not Found: /favicon.ico
+2018-08-31 14:14:08,748 - Not Found: /favicon.ico
+2018-08-31 14:14:16,890 - Not Found: /favicon.ico
+2018-08-31 14:15:21,466 - Not Found: /favicon.ico
+2018-08-31 14:15:27,141 - Internal Server Error: /get_all_line_count
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 43, in get_all_line_count
+    result = model_homePage.get_all_line_count(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 93, in get_all_line_count
+    for line_id in line_counts:
+TypeError: 'int' object is not iterable
+2018-08-02 14:43:26,100 - Not Found: /favicon.ico
+2018-08-05 22:49:43,243 - Not Found: /favicon.ico
+2018-08-05 22:51:42,653 - Not Found: /favicon.ico
+2018-08-05 22:51:43,699 - Internal Server Error: /get_dataList
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 133, in getDetailList
+    ngRgb = get_config("NG_RGB")
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 13, in get_config
+    return json_data[key]
+KeyError: 'NG_RGB'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 67, in get_dataList
+    result = model_homePage.getDataList(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 12, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 140, in getDetailList
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-08-05 22:51:57,500 - Internal Server Error: /get_DetailList
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_warningDetail.py", line 16, in getDetailList
+    limit = models_common.get_config("limit")
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 13, in get_config
+    return json_data[key]
+KeyError: 'limit'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_warningDetail.py", line 14, in get_DetailList
+    result = models_warningDetail.getDetailList(model_name, process_cd, datatype_id, line_cd)
+  File "D:\项目汇总\two\RtMonSys\models\models_warningDetail.py", line 135, in getDetailList
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-08-05 22:52:01,916 - Internal Server Error: /get_dataList
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 133, in getDetailList
+    ngRgb = get_config("NG_RGB")
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 13, in get_config
+    return json_data[key]
+KeyError: 'NG_RGB'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 67, in get_dataList
+    result = model_homePage.getDataList(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 12, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 140, in getDetailList
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-08-05 22:52:04,417 - Internal Server Error: /get_dataList
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 133, in getDetailList
+    ngRgb = get_config("NG_RGB")
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 13, in get_config
+    return json_data[key]
+KeyError: 'NG_RGB'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 67, in get_dataList
+    result = model_homePage.getDataList(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 12, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 140, in getDetailList
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-08-05 22:52:06,926 - Internal Server Error: /get_dataList
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 133, in getDetailList
+    ngRgb = get_config("NG_RGB")
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 13, in get_config
+    return json_data[key]
+KeyError: 'NG_RGB'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 67, in get_dataList
+    result = model_homePage.getDataList(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 12, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 140, in getDetailList
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-08-05 22:52:16,527 - Internal Server Error: /get_dataList
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 133, in getDetailList
+    ngRgb = get_config("NG_RGB")
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 13, in get_config
+    return json_data[key]
+KeyError: 'NG_RGB'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 67, in get_dataList
+    result = model_homePage.getDataList(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 12, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 140, in getDetailList
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-08-05 22:52:19,757 - Not Found: /favicon.ico
+2018-08-05 22:52:20,544 - Internal Server Error: /get_dataList
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 133, in getDetailList
+    ngRgb = get_config("NG_RGB")
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 13, in get_config
+    return json_data[key]
+KeyError: 'NG_RGB'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 67, in get_dataList
+    result = model_homePage.getDataList(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 12, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 140, in getDetailList
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-08-05 22:52:23,825 - Internal Server Error: /get_dataList
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 133, in getDetailList
+    ngRgb = get_config("NG_RGB")
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 13, in get_config
+    return json_data[key]
+KeyError: 'NG_RGB'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 67, in get_dataList
+    result = model_homePage.getDataList(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 12, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 140, in getDetailList
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-08-05 22:52:34,305 - Internal Server Error: /get_dataList
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 133, in getDetailList
+    ngRgb = get_config("NG_RGB")
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 13, in get_config
+    return json_data[key]
+KeyError: 'NG_RGB'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 67, in get_dataList
+    result = model_homePage.getDataList(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 12, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 140, in getDetailList
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-08-05 00:32:47,618 - Internal Server Error: /get_dataList
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 67, in get_dataList
+    result = model_homePage.getDataList(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 10, in getDataList
+    end_time = now.strftime("%Y-%m-%d %H:%M:%S")
+AttributeError: 'str' object has no attribute 'strftime'
+2018-08-05 00:32:47,641 - Internal Server Error: /get_all_line_count
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 43, in get_all_line_count
+    result = model_homePage.get_all_line_count(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 92, in get_all_line_count
+    line_counts = getDataList(model_name, process_cd, datatype_id, True)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 10, in getDataList
+    end_time = now.strftime("%Y-%m-%d %H:%M:%S")
+AttributeError: 'str' object has no attribute 'strftime'
+2018-08-05 00:40:21,297 - Not Found: /favicon.ico
+2018-08-05 01:18:58,634 - Not Found: /favicon.ico
+2018-08-05 01:23:12,974 - Internal Server Error: /get_all_line_count
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 43, in get_all_line_count
+    result = model_homePage.get_all_line_count(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 99, in get_all_line_count
+    for line_id in line_counts:
+TypeError: 'int' object is not iterable
+2018-08-05 01:23:27,972 - Not Found: /favicon.ico
+2018-08-05 01:41:46,642 - Not Found: /favicon.ico
+2018-08-05 01:46:20,699 - Not Found: /favicon.ico
+2018-08-05 01:52:02,609 - Not Found: /favicon.ico
+2018-08-05 01:52:27,838 - Not Found: /favicon.ico
+2018-08-05 01:57:36,604 - Not Found: /favicon.ico
+2018-08-05 02:08:53,866 - Not Found: /favicon.ico
+2018-08-05 02:09:02,723 - Not Found: /favicon.ico
+2018-08-05 02:11:18,148 - Not Found: /favicon.ico
+2018-08-05 02:12:12,901 - Not Found: /favicon.ico
+2018-08-05 14:24:34,304 - Not Found: /favicon.ico
+2018-08-05 14:29:52,352 - Not Found: /favicon.ico
+2018-09-03 09:07:49,086 - Not Found: /favicon.ico
+2018-09-03 09:08:21,622 - Not Found: /favicon.ico
+2018-08-05 13:43:25,420 - Not Found: /favicon.ico
+2018-08-05 13:47:18,482 - Not Found: /favicon.ico
+2018-08-05 13:49:26,174 - Not Found: /favicon.ico
+2018-08-05 13:56:35,432 - Not Found: /favicon.ico
+2018-08-05 13:56:52,817 - Not Found: /favicon.ico
+2018-08-05 14:55:15,594 - Internal Server Error: /get_DetailList
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_warningDetail.py", line 17, in get_DetailList
+    result.append(NG_RGB)
+AttributeError: 'dict' object has no attribute 'append'
+2018-08-05 15:11:03,496 - Not Found: /favicon.ico
+2018-08-05 13:43:36,539 - Not Found: /favicon.ico
+2018-08-05 13:46:14,480 - Not Found: /favicon.ico
+2018-08-05 13:46:36,939 - Not Found: /favicon.ico
+2018-08-05 13:47:43,974 - Not Found: /favicon.ico
+2018-08-05 13:53:35,511 - Internal Server Error: /get_all_line_count
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 43, in get_all_line_count
+    result = model_homePage.get_all_line_count(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 99, in get_all_line_count
+    for line_id in line_counts:
+TypeError: 'int' object is not iterable
+2018-08-05 14:07:14,272 - Internal Server Error: /get_all_line_count
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 43, in get_all_line_count
+    result = model_homePage.get_all_line_count(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 99, in get_all_line_count
+    for line_id in line_counts:
+TypeError: 'int' object is not iterable
+2018-08-05 14:08:18,476 - Internal Server Error: /get_all_line_count
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 43, in get_all_line_count
+    result = model_homePage.get_all_line_count(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 99, in get_all_line_count
+    for line_id in line_counts:
+TypeError: 'int' object is not iterable
+2018-08-05 14:09:09,373 - Internal Server Error: /get_all_line_count
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 43, in get_all_line_count
+    result = model_homePage.get_all_line_count(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 99, in get_all_line_count
+    for line_id in line_counts:
+TypeError: 'int' object is not iterable
+2018-08-05 14:33:09,735 - Internal Server Error: /get_all_line_count
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 43, in get_all_line_count
+    result = model_homePage.get_all_line_count(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 99, in get_all_line_count
+    for line_id in line_counts:
+TypeError: 'int' object is not iterable
+2018-08-05 14:11:26,827 - Internal Server Error: /get_all_line_count
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 121, in getDetailList
+    print(sql)
+OSError: [Errno 22] Invalid argument
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 43, in get_all_line_count
+    result = model_homePage.get_all_line_count(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 89, in get_all_line_count
+    line_counts = getDataList(model_name, process_cd, datatype_id, True)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 11, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 148, in getDetailList
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-08-05 15:42:20,959 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 108, in getLine
+    count.append((count_in - count_jig)/count_in * 100)
+ZeroDivisionError: division by zero
+2018-08-05 13:48:54,427 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 101, in getLine
+    Yield = str("%.2f" % (count_in - count_jig)/count_in * 100) + '%'
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+2018-08-05 13:49:03,983 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 101, in getLine
+    Yield = str("%.2f" % (count_in - count_jig)/count_in * 100) + '%'
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+2018-08-05 13:59:31,673 - Internal Server Error: /get_dataList
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 68, in get_dataList
+    result = model_homePage.getDataList(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 13, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 150, in getDetailList
+    connections[model_name].close()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 196, in __getitem__
+    if hasattr(self._connections, alias):
+TypeError: hasattr(): attribute name must be string
+2018-08-05 13:59:41,190 - Internal Server Error: /get_dataList
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 68, in get_dataList
+    result = model_homePage.getDataList(model_name, process_cd, datatype_id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 13, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 150, in getDetailList
+    connections[model_name].close()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 196, in __getitem__
+    if hasattr(self._connections, alias):
+TypeError: hasattr(): attribute name must be string
+2018-08-05 14:15:18,208 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 282, in getJIGByLine
+    print(sql)
+OSError: [Errno 22] Invalid argument
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 95, in getLine
+    count_jig = models_common.getJIGByLine(model,i,process, datatype_Id, start_time, end_time)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 288, in getJIGByLine
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-08-05 14:15:23,463 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 282, in getJIGByLine
+    print(sql)
+OSError: [Errno 22] Invalid argument
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 95, in getLine
+    count_jig = models_common.getJIGByLine(model,i,process, datatype_Id, start_time, end_time)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 288, in getJIGByLine
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-09-07 08:33:15,074 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 96, in getLine
+    count_in = IN_Result[num]
+IndexError: list index out of range
+2018-09-07 08:34:14,030 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 95, in getLine
+    count_jig = JIG_Result[num]
+IndexError: list index out of range
+2018-08-05 13:44:30,593 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 194, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 174, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "C:\Users\Administrator\venv\lib\site-packages\psycopg2\__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host "10.107.171.101" and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 527, in getNGByLine_
+    cur = connections[model_name].cursor()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 255, in cursor
+    return self._cursor()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 232, in _cursor
+    self.ensure_connection()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 194, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 174, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "C:\Users\Administrator\venv\lib\site-packages\psycopg2\__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host "10.107.171.101" and accepting
+	TCP/IP connections on port 5432?
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 92, in getLine
+    IN_Result = models_common.getNGByLine_(model, process, datatype_Id, start_time, end_time)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 609, in getNGByLine_
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-08-05 13:45:43,865 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 194, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 174, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "C:\Users\Administrator\venv\lib\site-packages\psycopg2\__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host "10.107.171.101" and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 416, in getJIGByLine_
+    cur = connections[model_name].cursor()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 255, in cursor
+    return self._cursor()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 232, in _cursor
+    self.ensure_connection()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 216, in ensure_connection
+    self.connect()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\base\base.py", line 194, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 174, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "C:\Users\Administrator\venv\lib\site-packages\psycopg2\__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host "10.107.171.101" and accepting
+	TCP/IP connections on port 5432?
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 91, in getLine
+    JIG_Result = models_common.getJIGByLine_(model, process, datatype_Id, start_time, end_time)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 498, in getJIGByLine_
+    print(exp)
+OSError: [Errno 22] Invalid argument
+2018-08-05 15:16:57,636 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 95, in getLine
+    count_jig = models_common.getJIGByLine(model,i, process, start_time, end_time)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 208, in getJIGByLine
+    return count
+UnboundLocalError: local variable 'count' referenced before assignment
+2018-08-05 15:17:10,253 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 95, in getLine
+    count_jig = models_common.getJIGByLine(model,i, process, start_time, end_time)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 208, in getJIGByLine
+    return count
+UnboundLocalError: local variable 'count' referenced before assignment
+2018-07-16 09:10:49,713 - Not Found: /time_interval
+2018-07-16 09:10:49,734 - Not Found: /initData
+2018-07-16 09:10:53,068 - Not Found: /time_interval
+2018-07-16 09:10:53,082 - Not Found: /initData
+2018-07-16 09:10:53,111 - Not Found: /time_interval
+2018-07-16 09:11:28,270 - Not Found: /initData
+2018-07-16 09:11:28,288 - Not Found: /time_interval
+2018-07-16 09:11:28,317 - Not Found: /time_interval
+2018-07-16 09:11:33,633 - Not Found: /time_interval
+2018-07-16 09:13:14,626 - Not Found: /time_interval
+2018-07-16 09:13:14,634 - Not Found: /initData
+2018-07-16 09:13:14,647 - Not Found: /time_interval
+2018-07-16 09:13:41,735 - Not Found: /time_interval
+2018-08-05 13:48:40,987 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 82, in getLine
+    type = datatypeItem["TYPE"]
+KeyError: 'TYPE'
+2018-08-05 14:23:14,131 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 102, in getLine
+    result.append({"line": line,"JIG_COUNT":JIG_COUNT,"IN_COUNT":IN_COUNT,"YIELD":YIELD,"PROCESS_YIELD":datatypeItem["PROCESS_YIELD"],"INTERVAL":database["hour_interval"]})
+TypeError: list indices must be integers or slices, not str
+2018-08-05 14:24:04,984 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 102, in getLine
+    result.append({"line": line,"JIG_COUNT":JIG_COUNT,"IN_COUNT":IN_COUNT,"YIELD":YIELD,"PROCESS_YIELD":datatypeItem["PROCESS_YIELD"],"INTERVAL":database["hour_interval"]})
+TypeError: list indices must be integers or slices, not str
+2018-08-05 14:24:11,645 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 51, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 102, in getLine
+    result.append({"line": line,"JIG_COUNT":JIG_COUNT,"IN_COUNT":IN_COUNT,"YIELD":YIELD,"PROCESS_YIELD":datatypeItem["PROCESS_YIELD"],"INTERVAL":database["hour_interval"]})
+TypeError: list indices must be integers or slices, not str
+2018-08-05 14:03:24,209 - Not Found: /window.open(go_serialDetail
+2018-08-05 14:04:15,030 - Not Found: /window.open(go_serialDetail
+2018-08-05 14:14:31,686 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 42, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 101, in getLine
+    if i == j.line_cd:
+AttributeError: 'dict' object has no attribute 'line_cd'
+2018-08-05 14:15:07,150 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 42, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 101, in getLine
+    if i == j.line_cd:
+AttributeError: 'dict' object has no attribute 'line_cd'
+2018-08-05 13:35:03,552 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 167, in ensure_defaults
+    conn = self.databases[alias]
+KeyError: 'undefined'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 42, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 77, in getLine
+    dataListResult = getDataList(model, process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 217, in getDetailList
+    connections[model_name].close()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 199, in __getitem__
+    self.ensure_defaults(alias)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 169, in ensure_defaults
+    raise ConnectionDoesNotExist("The connection %s doesn't exist" % alias)
+django.db.utils.ConnectionDoesNotExist: The connection undefined doesn't exist
+2018-08-05 13:35:20,615 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 167, in ensure_defaults
+    conn = self.databases[alias]
+KeyError: 'undefined'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 42, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 77, in getLine
+    dataListResult = getDataList(model, process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 217, in getDetailList
+    connections[model_name].close()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 199, in __getitem__
+    self.ensure_defaults(alias)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 169, in ensure_defaults
+    raise ConnectionDoesNotExist("The connection %s doesn't exist" % alias)
+django.db.utils.ConnectionDoesNotExist: The connection undefined doesn't exist
+2018-08-05 13:38:20,019 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 167, in ensure_defaults
+    conn = self.databases[alias]
+KeyError: 'undefined'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 42, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 77, in getLine
+    dataListResult = getDataList(model, process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 217, in getDetailList
+    connections[model_name].close()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 199, in __getitem__
+    self.ensure_defaults(alias)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 169, in ensure_defaults
+    raise ConnectionDoesNotExist("The connection %s doesn't exist" % alias)
+django.db.utils.ConnectionDoesNotExist: The connection undefined doesn't exist
+2018-08-05 13:38:37,252 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 167, in ensure_defaults
+    conn = self.databases[alias]
+KeyError: 'undefined'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two\RtMonSys\views\view_homePage.py", line 42, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 77, in getLine
+    dataListResult = getDataList(model, process,datatype_Id)
+  File "D:\项目汇总\two\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result = models_common.getDetailList(model_name, process_cd, datatype_id, start_time, end_time, firstFlg)
+  File "D:\项目汇总\two\RtMonSys\models\models_common.py", line 217, in getDetailList
+    connections[model_name].close()
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 199, in __getitem__
+    self.ensure_defaults(alias)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\db\utils.py", line 169, in ensure_defaults
+    raise ConnectionDoesNotExist("The connection %s doesn't exist" % alias)
+django.db.utils.ConnectionDoesNotExist: The connection undefined doesn't exist
+2018-08-05 14:01:46,118 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 42, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 83, in getLine
+    JIG = datatypeItem["JIG"]
+KeyError: 'JIG'
+2018-08-05 14:02:48,738 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 42, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 101, in getLine
+    count_jig = JIG_Result[num]
+IndexError: list index out of range
+2018-08-05 14:12:36,762 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 42, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 93, in getLine
+    JIG_Result, IN_Result = models_common.getJIG_NGByLine(model, process, start_time, end_time)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 400, in getJIG_NGByLine
+    return ng_list, in_list
+UnboundLocalError: local variable 'ng_list' referenced before assignment
+2018-08-05 14:12:59,114 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 42, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 93, in getLine
+    JIG_Result, IN_Result = models_common.getJIG_NGByLine(model, process, start_time, end_time)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 400, in getJIG_NGByLine
+    return ng_list, in_list
+UnboundLocalError: local variable 'ng_list' referenced before assignment
+2018-08-05 14:13:17,932 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 42, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 101, in getLine
+    count_jig = JIG_Result[num]
+IndexError: list index out of range
+2018-09-14 14:18:08,574 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 42, in get_line
+    result = model_homePage.getLine(model,process,datatype_Id)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 104, in getLine
+    for j in dataListResult:
+TypeError: 'int' object is not iterable
+2018-09-20 10:45:54,843 - Not Found: /static/sources/js/datatables.js
+2018-09-20 10:45:59,425 - Not Found: /static/sources/css/bootstrap/bootstrap.css
+2018-09-20 10:45:59,428 - Not Found: /static/sources/css/font-awesome/css/font-awesome.min.css
+2018-09-20 10:45:59,436 - Not Found: /static/sources/css/Ionicons/ionicons.min.css
+2018-09-20 10:45:59,438 - Not Found: /static/sources/css/basictable/basictable.css
+2018-09-20 10:45:59,448 - Not Found: /static/sources/css/dist/AdminLTE.css
+2018-09-20 10:45:59,458 - Not Found: /static/sources/css/dist/_all-skins.css
+2018-09-20 10:45:59,477 - Not Found: /static/sources/css/toastr/toastr.css
+2018-09-20 10:45:59,485 - Not Found: /static/sources/css/basictable/style.css
+2018-09-20 10:45:59,495 - Not Found: /static/sources/js/jquery.min.js
+2018-09-20 10:45:59,504 - Not Found: /static/sources/js/bootstrap.js
+2018-09-20 10:45:59,523 - Not Found: /static/sources/js/bootstrap-table.js
+2018-09-20 10:45:59,527 - Not Found: /static/sources/js/adminlte.js
+2018-09-20 10:45:59,540 - Not Found: /static/sources/js/angular.js
+2018-09-20 10:45:59,550 - Not Found: /static/sources/js/toastr.js
+2018-09-20 10:45:59,561 - Not Found: /static/sources/images/nidec.png
+2018-09-20 10:45:59,571 - Not Found: /static/sources/js/jquery.basictable.js
+2018-09-20 10:45:59,580 - Not Found: /static/sources/js/datatables.js
+2018-09-20 10:45:59,590 - Not Found: /static/js/homePage.js
+2018-09-20 10:45:59,601 - Not Found: /static/sources/js/bootstrap-table.js
+2018-09-20 10:45:59,612 - Not Found: /static/sources/images/ios7-arrow-down.png
+2018-09-20 10:45:59,622 - Not Found: /static/sources/images/ios7-arrow-up.png
+2018-09-20 10:45:59,630 - Not Found: /static/sources/images/ajax-loader.gif
+2018-09-20 10:45:59,647 - Not Found: /static/sources/js/angular.js
+2018-09-20 10:45:59,659 - Not Found: /static/sources/js/toastr.js
+2018-09-20 10:45:59,670 - Not Found: /static/sources/js/jquery.basictable.js
+2018-09-20 10:45:59,683 - Not Found: /static/sources/js/datatables.js
+2018-09-20 10:45:59,707 - Not Found: /static/js/homePage.js
+2018-09-20 10:46:01,345 - Not Found: /static/sources/css/bootstrap/bootstrap.css
+2018-09-20 10:46:01,355 - Not Found: /static/sources/css/font-awesome/css/font-awesome.min.css
+2018-09-20 10:46:01,364 - Not Found: /static/sources/css/Ionicons/ionicons.min.css
+2018-09-20 10:46:01,374 - Not Found: /static/sources/css/basictable/basictable.css
+2018-09-20 10:46:01,385 - Not Found: /static/sources/css/dist/AdminLTE.css
+2018-09-20 10:46:01,395 - Not Found: /static/sources/css/dist/_all-skins.css
+2018-09-20 10:46:01,403 - Not Found: /static/sources/css/toastr/toastr.css
+2018-09-20 10:46:01,413 - Not Found: /static/sources/css/basictable/style.css
+2018-09-20 10:46:01,422 - Not Found: /static/sources/js/jquery.min.js
+2018-09-20 10:46:01,431 - Not Found: /static/sources/js/bootstrap.js
+2018-09-20 10:46:01,441 - Not Found: /static/sources/js/adminlte.js
+2018-09-20 10:46:01,451 - Not Found: /static/sources/js/bootstrap-table.js
+2018-09-20 10:46:01,467 - Not Found: /static/sources/js/toastr.js
+2018-09-20 10:46:01,470 - Not Found: /static/sources/js/angular.js
+2018-09-20 10:46:01,485 - Not Found: /static/sources/images/nidec.png
+2018-09-20 10:46:01,495 - Not Found: /static/sources/js/jquery.basictable.js
+2018-09-20 10:46:01,503 - Not Found: /static/sources/js/datatables.js
+2018-09-20 10:46:01,513 - Not Found: /static/js/homePage.js
+2018-09-20 10:46:01,523 - Not Found: /static/sources/images/ios7-arrow-down.png
+2018-09-20 10:46:01,535 - Not Found: /static/sources/js/toastr.js
+2018-09-20 10:46:01,547 - Not Found: /static/sources/images/ios7-arrow-up.png
+2018-09-20 10:46:01,556 - Not Found: /static/sources/images/ajax-loader.gif
+2018-09-20 10:46:01,571 - Not Found: /static/sources/js/jquery.basictable.js
+2018-09-20 10:46:01,586 - Not Found: /static/sources/js/datatables.js
+2018-09-20 10:46:01,597 - Not Found: /static/js/homePage.js
+2018-09-20 10:46:02,247 - Not Found: /static/sources/css/bootstrap/bootstrap.css
+2018-09-20 10:46:02,257 - Not Found: /static/sources/css/font-awesome/css/font-awesome.min.css
+2018-09-20 10:46:02,279 - Not Found: /static/sources/css/Ionicons/ionicons.min.css
+2018-09-20 10:46:02,281 - Not Found: /static/sources/css/basictable/basictable.css
+2018-09-20 10:46:02,296 - Not Found: /static/sources/css/dist/AdminLTE.css
+2018-09-20 10:46:02,304 - Not Found: /static/sources/css/dist/_all-skins.css
+2018-09-20 10:46:02,316 - Not Found: /static/sources/css/toastr/toastr.css
+2018-09-20 10:46:02,324 - Not Found: /static/sources/css/basictable/style.css
+2018-09-20 10:46:02,351 - Not Found: /static/sources/js/bootstrap.js
+2018-09-20 10:46:02,352 - Not Found: /static/sources/js/jquery.min.js
+2018-09-20 10:46:02,362 - Not Found: /static/sources/js/adminlte.js
+2018-09-20 10:46:02,372 - Not Found: /static/sources/js/bootstrap-table.js
+2018-09-20 10:46:02,384 - Not Found: /static/sources/js/angular.js
+2018-09-20 10:46:02,394 - Not Found: /static/sources/js/toastr.js
+2018-09-20 10:46:02,405 - Not Found: /static/sources/images/nidec.png
+2018-09-20 10:46:02,415 - Not Found: /static/sources/js/bootstrap.js
+2018-09-20 10:46:02,426 - Not Found: /static/sources/js/jquery.basictable.js
+2018-09-20 10:46:02,435 - Not Found: /static/sources/js/datatables.js
+2018-09-20 10:46:02,447 - Not Found: /static/js/homePage.js
+2018-09-20 10:46:02,457 - Not Found: /static/sources/images/ios7-arrow-down.png
+2018-09-20 10:46:02,466 - Not Found: /static/sources/images/ios7-arrow-up.png
+2018-09-20 10:46:02,476 - Not Found: /static/sources/images/ajax-loader.gif
+2018-09-20 10:46:02,486 - Not Found: /static/sources/js/adminlte.js
+2018-09-20 10:46:02,501 - Not Found: /static/sources/js/bootstrap-table.js
+2018-09-20 10:46:02,514 - Not Found: /static/sources/js/angular.js
+2018-09-20 10:46:02,526 - Not Found: /static/sources/js/toastr.js
+2018-09-20 10:46:02,538 - Not Found: /static/sources/js/jquery.basictable.js
+2018-09-20 10:46:02,549 - Not Found: /static/sources/js/datatables.js
+2018-09-20 10:46:02,561 - Not Found: /static/js/homePage.js
+2018-09-20 10:46:02,776 - Not Found: /static/sources/css/bootstrap/bootstrap.css
+2018-09-20 10:46:02,779 - Not Found: /static/sources/css/Ionicons/ionicons.min.css
+2018-09-20 10:46:02,782 - Not Found: /static/sources/css/font-awesome/css/font-awesome.min.css
+2018-09-20 10:46:02,792 - Not Found: /static/sources/css/basictable/basictable.css
+2018-09-20 10:46:02,799 - Not Found: /static/sources/css/dist/AdminLTE.css
+2018-09-20 10:46:02,813 - Not Found: /static/sources/css/dist/_all-skins.css
+2018-09-20 10:46:02,822 - Not Found: /static/sources/css/toastr/toastr.css
+2018-09-20 10:46:02,832 - Not Found: /static/sources/css/basictable/style.css
+2018-09-20 10:46:02,843 - Not Found: /static/sources/js/jquery.min.js
+2018-09-20 10:46:02,851 - Not Found: /static/sources/js/bootstrap.js
+2018-09-20 10:46:02,863 - Not Found: /static/sources/js/adminlte.js
+2018-09-20 10:46:02,872 - Not Found: /static/sources/js/bootstrap-table.js
+2018-09-20 10:46:02,889 - Not Found: /static/sources/js/angular.js
+2018-09-20 10:46:02,899 - Not Found: /static/sources/js/toastr.js
+2018-09-20 10:46:02,909 - Not Found: /static/sources/images/nidec.png
+2018-09-20 10:46:02,928 - Not Found: /static/sources/js/bootstrap.js
+2018-09-20 10:46:02,931 - Not Found: /static/sources/js/jquery.basictable.js
+2018-09-20 10:46:02,940 - Not Found: /static/sources/js/datatables.js
+2018-09-20 10:46:02,950 - Not Found: /static/js/homePage.js
+2018-09-20 10:46:02,961 - Not Found: /static/sources/images/ios7-arrow-down.png
+2018-09-20 10:46:02,981 - Not Found: /static/sources/images/ios7-arrow-up.png
+2018-09-20 10:46:03,007 - Not Found: /static/sources/css/bootstrap/bootstrap.css
+2018-09-20 10:46:03,008 - Not Found: /static/sources/images/ajax-loader.gif
+2018-09-20 10:46:03,018 - Not Found: /static/sources/css/Ionicons/ionicons.min.css
+2018-09-20 10:46:03,029 - Not Found: /static/sources/css/font-awesome/css/font-awesome.min.css
+2018-09-20 10:46:03,042 - Not Found: /static/sources/css/basictable/basictable.css
+2018-09-20 10:46:03,052 - Not Found: /static/sources/css/dist/AdminLTE.css
+2018-09-20 10:46:03,066 - Not Found: /static/sources/css/dist/_all-skins.css
+2018-09-20 10:46:03,079 - Not Found: /static/sources/css/toastr/toastr.css
+2018-09-20 10:46:03,098 - Not Found: /static/sources/css/basictable/style.css
+2018-09-20 10:46:03,107 - Not Found: /static/sources/js/jquery.min.js
+2018-09-20 10:46:03,124 - Not Found: /static/sources/js/bootstrap.js
+2018-09-20 10:46:03,143 - Not Found: /static/sources/js/adminlte.js
+2018-09-20 10:46:03,167 - Not Found: /static/sources/js/bootstrap-table.js
+2018-09-20 10:46:03,176 - Not Found: /static/sources/js/angular.js
+2018-09-20 10:46:03,178 - Not Found: /static/sources/js/toastr.js
+2018-09-20 10:46:03,196 - Not Found: /static/sources/images/nidec.png
+2018-09-20 10:46:03,223 - Not Found: /static/sources/js/jquery.basictable.js
+2018-09-20 10:46:03,207 - Not Found: /static/sources/js/bootstrap.js
+2018-09-20 10:46:03,240 - Not Found: /static/js/homePage.js
+2018-09-20 10:46:03,247 - Not Found: /static/sources/js/datatables.js
+2018-09-20 10:46:03,266 - Not Found: /static/sources/images/ios7-arrow-down.png
+2018-09-20 10:46:03,275 - Not Found: /static/sources/images/ios7-arrow-up.png
+2018-09-20 10:46:03,286 - Not Found: /static/sources/images/ajax-loader.gif
+2018-09-20 10:46:03,296 - Not Found: /static/sources/js/adminlte.js
+2018-09-20 10:46:03,314 - Not Found: /static/sources/js/bootstrap-table.js
+2018-09-20 10:46:03,326 - Not Found: /static/sources/js/angular.js
+2018-09-20 10:46:03,338 - Not Found: /static/sources/js/toastr.js
+2018-09-20 10:46:03,351 - Not Found: /static/sources/js/jquery.basictable.js
+2018-09-20 10:46:03,364 - Not Found: /static/sources/js/datatables.js
+2018-09-20 10:46:03,376 - Not Found: /static/js/homePage.js
+2018-09-20 10:46:04,182 - Not Found: /static/sources/css/bootstrap/bootstrap.css
+2018-09-20 10:46:04,198 - Not Found: /static/sources/css/Ionicons/ionicons.min.css
+2018-09-20 10:46:04,200 - Not Found: /static/sources/css/font-awesome/css/font-awesome.min.css
+2018-09-20 10:46:04,212 - Not Found: /static/sources/css/basictable/basictable.css
+2018-09-20 10:46:04,221 - Not Found: /static/sources/css/dist/AdminLTE.css
+2018-09-20 10:46:04,234 - Not Found: /static/sources/css/dist/_all-skins.css
+2018-09-20 10:46:04,243 - Not Found: /static/sources/css/toastr/toastr.css
+2018-09-20 10:46:04,254 - Not Found: /static/sources/css/basictable/style.css
+2018-09-20 10:46:04,267 - Not Found: /static/sources/js/jquery.min.js
+2018-09-20 10:46:04,278 - Not Found: /static/sources/js/bootstrap.js
+2018-09-20 10:46:04,293 - Not Found: /static/sources/js/adminlte.js
+2018-09-20 10:46:04,316 - Not Found: /static/sources/js/bootstrap-table.js
+2018-09-20 10:46:04,319 - Not Found: /static/sources/js/angular.js
+2018-09-20 10:46:04,331 - Not Found: /static/sources/js/toastr.js
+2018-09-20 10:46:04,349 - Not Found: /static/sources/images/nidec.png
+2018-09-20 10:46:04,353 - Not Found: /static/sources/js/jquery.basictable.js
+2018-09-20 10:46:04,363 - Not Found: /static/sources/js/datatables.js
+2018-09-20 10:46:04,374 - Not Found: /static/js/homePage.js
+2018-09-20 10:46:04,391 - Not Found: /static/sources/images/ios7-arrow-up.png
+2018-09-20 10:46:04,396 - Not Found: /static/sources/images/ios7-arrow-down.png
+2018-09-20 10:46:04,407 - Not Found: /static/sources/images/ajax-loader.gif
+2018-09-20 10:46:04,770 - Not Found: /static/sources/css/bootstrap/bootstrap.css
+2018-09-20 10:46:04,780 - Not Found: /static/sources/css/font-awesome/css/font-awesome.min.css
+2018-09-20 10:46:04,788 - Not Found: /static/sources/css/Ionicons/ionicons.min.css
+2018-09-20 10:46:04,797 - Not Found: /static/sources/css/basictable/basictable.css
+2018-09-20 10:46:04,818 - Not Found: /static/sources/css/dist/AdminLTE.css
+2018-09-20 10:46:04,829 - Not Found: /static/sources/css/dist/_all-skins.css
+2018-09-20 10:46:04,838 - Not Found: /static/sources/css/toastr/toastr.css
+2018-09-20 10:46:04,848 - Not Found: /static/sources/css/basictable/style.css
+2018-09-20 10:46:04,860 - Not Found: /static/sources/js/jquery.min.js
+2018-09-20 10:46:04,868 - Not Found: /static/sources/js/bootstrap.js
+2018-09-20 10:46:04,881 - Not Found: /static/sources/js/adminlte.js
+2018-09-20 10:46:04,889 - Not Found: /static/sources/js/bootstrap-table.js
+2018-09-20 10:46:04,901 - Not Found: /static/sources/js/angular.js
+2018-09-20 10:46:04,910 - Not Found: /static/sources/js/toastr.js
+2018-09-20 10:46:04,920 - Not Found: /static/sources/images/nidec.png
+2018-09-20 10:46:04,929 - Not Found: /static/sources/js/jquery.basictable.js
+2018-09-20 10:46:04,943 - Not Found: /static/sources/js/datatables.js
+2018-09-20 10:46:04,954 - Not Found: /static/js/homePage.js
+2018-09-20 10:46:04,963 - Not Found: /static/sources/images/ios7-arrow-down.png
+2018-09-20 10:46:04,972 - Not Found: /static/sources/images/ios7-arrow-up.png
+2018-09-20 10:46:04,985 - Not Found: /static/sources/images/ajax-loader.gif
+2018-09-20 10:46:05,002 - Not Found: /static/js/homePage.js
+2018-09-20 10:46:06,937 - Not Found: /static/sources/js/datatables.js
+2018-08-05 13:31:57,719 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 49, in get_line
+    result = model_homePage.getLine(model,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 161, in getLine
+    JIG_Result, IN_Result = models_common.getJIG_NGByLine(model, process, limit, start_time, end_time)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 485, in getJIG_NGByLine
+    return ng_list, in_list
+UnboundLocalError: local variable 'ng_list' referenced before assignment
+2018-10-18 08:15:23,337 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 49, in get_line
+    result = model_homePage.getLine(model,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 161, in getLine
+    JIG_Result, IN_Result = models_common.getJIG_NGByLine(model, process, limit, start_time, end_time)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 485, in getJIG_NGByLine
+    return ng_list, in_list
+UnboundLocalError: local variable 'ng_list' referenced before assignment
+2018-10-18 08:15:32,005 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 49, in get_line
+    result = model_homePage.getLine(model,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 161, in getLine
+    JIG_Result, IN_Result = models_common.getJIG_NGByLine(model, process, limit, start_time, end_time)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 485, in getJIG_NGByLine
+    return ng_list, in_list
+UnboundLocalError: local variable 'ng_list' referenced before assignment
+2018-10-24 14:45:09,021 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 44, in get_line
+    JIG = row[0]['JIG']
+KeyError: 'JIG'
+2018-10-24 14:45:55,489 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 44, in get_line
+    JIG = row[0]['JIG']
+KeyError: 'JIG'
+2018-10-24 14:49:39,619 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 44, in get_line
+    JIG = row[0]['JIG_S'] + ',' + row[0]['JIG_E']
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2018-10-25 10:23:07,057 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 45, in get_line
+    PROCESS = str(row[0]['PROCESS_S'] )+ ',' + row[0]['PROCESS_E']
+TypeError: can only concatenate str (not "int") to str
+2018-10-25 10:23:12,785 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 45, in get_line
+    PROCESS = str(row[0]['PROCESS_S'] )+ ',' + row[0]['PROCESS_E']
+TypeError: can only concatenate str (not "int") to str
+2018-08-05 13:31:54,888 - Internal Server Error: /get_DetailList
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_warningDetail.py", line 19, in get_DetailList
+    JIG = row[0]['JIG']
+KeyError: 'JIG'
+2018-08-05 13:32:11,428 - Internal Server Error: /get_DetailList
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_warningDetail.py", line 19, in get_DetailList
+    JIG = row[0]['JIG']
+KeyError: 'JIG'
+2018-08-05 13:32:29,226 - Internal Server Error: /get_DetailList
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_warningDetail.py", line 19, in get_DetailList
+    JIG = row[0]['JIG']
+KeyError: 'JIG'
+2018-08-05 13:32:39,922 - Internal Server Error: /get_DetailList
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_warningDetail.py", line 19, in get_DetailList
+    JIG = row[0]['JIG']
+KeyError: 'JIG'
+2018-08-05 13:35:29,087 - Internal Server Error: /initConfig
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 34, in initConfig
+    result = model_homePage.initConfig()
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 58, in initConfig
+    process = model_setting.get_process(model)[0]
+IndexError: list index out of range
+2018-08-05 13:40:35,657 - Internal Server Error: /initConfig
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 34, in initConfig
+    result = model_homePage.initConfig()
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 58, in initConfig
+    process = model_setting.get_process(model)[0]
+IndexError: list index out of range
+2018-08-05 13:40:47,155 - Internal Server Error: /initConfig
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 34, in initConfig
+    result = model_homePage.initConfig()
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 58, in initConfig
+    process = model_setting.get_process(model)[0]
+IndexError: list index out of range
+2018-08-05 13:42:20,901 - Internal Server Error: /initConfig
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 34, in initConfig
+    result = model_homePage.initConfig()
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 58, in initConfig
+    process = model_setting.get_process(model)[0]
+IndexError: list index out of range
+2018-08-05 13:44:01,155 - Internal Server Error: /initConfig
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 34, in initConfig
+    result = model_homePage.initConfig()
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 58, in initConfig
+    process = model_setting.get_process(model)[0]
+IndexError: list index out of range
+2018-10-26 14:46:31,872 - Internal Server Error: /initConfig
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 34, in initConfig
+    result = model_homePage.initConfig()
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 58, in initConfig
+    if len(model_setting.get_process(model) == 0):
+TypeError: object of type 'bool' has no len()
+2018-08-05 14:20:03,524 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 50, in get_line
+    jsonstr = json.dumps(result)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37-32\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37-32\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37-32\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37-32\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
+2018-10-29 08:55:14,727 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 49, in get_line
+    result = model_homePage.getLine(model,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 298, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-10-29 08:56:32,849 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 49, in get_line
+    result = model_homePage.getLine(model,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 297, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-10-29 08:56:45,279 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 49, in get_line
+    result = model_homePage.getLine(model,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 297, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-10-29 08:57:46,727 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 49, in get_line
+    result = model_homePage.getLine(model,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 297, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-10-29 08:58:43,498 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 49, in get_line
+    result = model_homePage.getLine(model,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 297, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-10-29 08:59:45,392 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 49, in get_line
+    result = model_homePage.getLine(model,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 297, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-10-29 08:59:50,406 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 49, in get_line
+    result = model_homePage.getLine(model,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 297, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-10-29 09:00:27,946 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 49, in get_line
+    result = model_homePage.getLine(model,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 297, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-10-29 09:02:33,313 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 43, in get_line
+    name = row[0]['name']
+KeyError: 'name'
+2018-10-29 09:02:42,825 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 43, in get_line
+    name = row[0]['name']
+KeyError: 'name'
+2018-08-05 13:41:00,350 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 43, in get_line
+    name = row[0]['name']
+KeyError: 'name'
+2018-08-05 13:41:14,433 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 43, in get_line
+    name = row[0]['name']
+KeyError: 'name'
+2018-08-05 13:47:20,187 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 50, in get_line
+    result = model_homePage.getLine(model,name,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, name, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name,name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 298, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-08-05 13:51:44,684 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 50, in get_line
+    result = model_homePage.getLine(model,name,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, name, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name,name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 299, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-08-05 13:52:27,304 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 50, in get_line
+    result = model_homePage.getLine(model,name,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, name, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name,name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 299, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-08-05 13:52:27,350 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 50, in get_line
+    result = model_homePage.getLine(model,name,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, name, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name,name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 299, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-08-05 13:54:54,190 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 50, in get_line
+    result = model_homePage.getLine(model,name,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, name, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name,name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 299, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-10-29 09:24:50,538 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 50, in get_line
+    result = model_homePage.getLine(model,name,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, name, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name,name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 299, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-08-05 13:46:04,123 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 50, in get_line
+    result = model_homePage.getLine(model,name,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, name, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name,name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 299, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-08-05 13:53:15,108 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 50, in get_line
+    result = model_homePage.getLine(model,name,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, name, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name,name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 301, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-08-05 13:54:37,137 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 50, in get_line
+    result = model_homePage.getLine(model,name,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, name, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name,name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 299, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-08-05 13:57:28,571 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 50, in get_line
+    result = model_homePage.getLine(model,name,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, name, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name,name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 299, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-08-05 13:48:24,707 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 50, in get_line
+    result = model_homePage.getLine(model,name,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 148, in getLine
+    dataListResult, dataList = getDataList(model, name, process,datatype_Id,limit,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 15, in getDataList
+    result, dataList = models_common.getDetailList_update2(model_name,name, process_cd, datatype_id,limit, start_time, end_time,JIG_type)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_common.py", line 301, in getDetailList_update2
+    return result, data_list
+UnboundLocalError: local variable 'data_list' referenced before assignment
+2018-08-05 14:10:53,779 - Internal Server Error: /get_line
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_homePage.py", line 50, in get_line
+    result = model_homePage.getLine(model,name,process_name,datatype_Id,JIG,PROCESS,JIG_type,PROCESS_type,limit)
+  File "D:\项目汇总\two_0805\RtMonSys\models\model_homePage.py", line 169, in getLine
+    for j in dataListResult:
+TypeError: 'int' object is not iterable
+2018-08-05 13:41:52,765 - Internal Server Error: /get_InspectList
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_inspectDetail.py", line 22, in get_InspectList
+    result = models_inspectDetail.getInspectList(model_name,name,datatype_id,limit,start_time, end_time, line_cd, serial_cd, process_name, station_slot)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_inspectDetail.py", line 49, in getInspectList
+    return inspectList
+UnboundLocalError: local variable 'inspectList' referenced before assignment
+2018-08-05 13:41:57,543 - Internal Server Error: /get_InspectList
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_inspectDetail.py", line 22, in get_InspectList
+    result = models_inspectDetail.getInspectList(model_name,name,datatype_id,limit,start_time, end_time, line_cd, serial_cd, process_name, station_slot)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_inspectDetail.py", line 49, in getInspectList
+    return inspectList
+UnboundLocalError: local variable 'inspectList' referenced before assignment
+2018-08-05 13:42:02,668 - Internal Server Error: /get_InspectList
+Traceback (most recent call last):
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\项目汇总\two_0805\RtMonSys\views\view_inspectDetail.py", line 22, in get_InspectList
+    result = models_inspectDetail.getInspectList(model_name,name,datatype_id,limit,start_time, end_time, line_cd, serial_cd, process_name, station_slot)
+  File "D:\项目汇总\two_0805\RtMonSys\models\models_inspectDetail.py", line 49, in getInspectList
+    return inspectList
+UnboundLocalError: local variable 'inspectList' referenced before assignment

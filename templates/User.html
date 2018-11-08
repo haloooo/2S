@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Setting</title>
+
+
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../static/sources/css/bootstrap/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../static/sources/css/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../static/sources/css/Ionicons/ionicons.min.css">
+    <!-- basictable -->
+    <link rel="stylesheet" href="../static/sources/css/basictable/basictable.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../static/sources/css/dist/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../static/sources/css/dist/_all-skins.css">
+    <!-- toastr -->
+    <link rel="stylesheet" href="../static/sources/css/toastr/toastr.css">
+    <!-- style -->
+    <link rel="stylesheet" href="../static/sources/css/basictable/style.css">
+    <style>
+        .spec tr td{
+            height: 40px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini" ng-app="AppUser" >
+<div class="wrapper">
+    <header class="main-header">
+        <!-- Logo -->
+        <div class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini">Nidec</span>
+            <!-- logo for regular state and mobile devices -->
+            <img src="../static/sources/images/nidec.png">
+        </div>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <!-- Sidebar toggle button-->
+            <div class="navbar-title" style="width: 99%; position: absolute;z-index: -100">
+                <div align="center" style="vertical-align: center" ng-cloak>
+                    <span style="font-size: 30px;color: #ffffff" id="display_title">RealTime Monitor System</span>
+                </div>
+            </div>
+            <!-- Sidebar toggle button-->
+            {% verbatim %}
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- Control Sidebar Toggle Button -->
+                    <li class="dropdown user user-menu">
+                        <a style="cursor: pointer" ng-click="showMenu()">
+                            <i class="fa fa-user"></i>
+                            <span class="hidden-xs" ng-cloak>{{ user_name }}</span>
+                        </a>
+                        <ul class="dropdown-menu" style="width: 80px; text-align: left" id="show_menu">
+                            <li class="user-footer">
+                                <a ng-click="showPassword()" id="logout" class="btn btn-default">
+                                    修改密码
+                                </a>
+                                <a ng-click="logout()" id="logout" class="btn btn-default" style="margin-top: 10px">
+                                    注销
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            {% endverbatim %}
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu" data-widget="tree">
+                <li><a href="go_homePage"><i class="fa fa-bookmark"></i> <span>HomePage</span></a></li>
+                <li id="go_setting" style="display: none"><a href="go_setting"><i class="fa fa-cog"></i> <span>Setting</span></a></li>
+                <li id="go_user" style="display: none" class="active"><a href="go_user"><i class="fa fa-user"></i> <span>User</span></a></li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content">
+            <div id="toolbar" class="btn-group">
+                <button id="btn_add" type="button" class="btn btn-success" ng-click="showAdd()">
+                    <span class="fa fa-plus" aria-hidden="true"></span>新增
+                </button>
+            </div>
+            <div id="app">
+                <table id="table">
+                    <thead>
+                    <tr>
+                        <th class="col-lg-2" style="text-align: center">
+                            <span style="font-size: 15px">序号</span>
+                        </th>
+                        <th class="col-lg-2" style="text-align: center">
+                            <span style="font-size: 15px">用户名</span>
+                        </th>
+                        <th class="col-lg-2" style="text-align: center">
+                            <span style="font-size: 15px">姓名</span>
+                        </th>
+                        <th class="col-lg-3" style="text-align: center">
+                            <span style="font-size: 15px">修改Setting权限</span>
+                        </th>
+                        <th class="col-lg-3" style="text-align: center">
+                            <span style="font-size: 15px">操作</span>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% verbatim %}
+                    <tr ng-repeat="item in userList">
+                        <td style="text-align: center"><span style="font-size: 15px">{{ $index+1 }}</span></td>
+                        <td style="text-align: center"><span style="font-size: 15px">{{ item.user_name }}</span></td>
+                        <td style="text-align: center"><span style="font-size: 15px">{{ item.true_name }}</span></td>
+                        <td style="text-align: center">
+                            <div ng-if="item.see_setting==0"><span style="font-size: 15px">否</span></div>
+                            <div ng-if="item.see_setting==1"><span style="font-size: 15px">是</span></div>
+                        </td>
+                        <td style="text-align: center">
+                            <div id="toolbar" class="btn-group">
+                                <button id="btn_edit" type="button" class="btn btn-warning" ng-click="showUpdate(item)">
+                                    <span class="fa fa-pencil" aria-hidden="true"></span>编辑
+                                </button>
+                                <button id="btn_delete" type="button" class="btn btn-danger" ng-click="showDelete(item.id)">
+                                    <span class="fa fa-remove" aria-hidden="true"></span>删除
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endverbatim %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+</div>
+
+<!-- 模态框（Modal）update -->
+<div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog" style="width: 500px">
+        <div class="modal-content">
+            <div class="modal-body">
+                {% verbatim %}
+                <table id="table" class="spec">
+                    <tr>
+                        <th style="text-align: left">
+                            <span style="font-size: 15px">用户名</span>
+                        </th>
+                        <td ><input type="text"  class="form-control" style="height: 40px" ng-model="selectedLine.user_name"></td>
+                    </tr>
+                    <tr>
+                        <th  style="text-align: left">
+                            <span style="font-size: 15px">密码</span>
+                        </th>
+                        <td ><input type="text"  class="form-control" style="height: 40px" ng-model="selectedLine.user_password"></td>
+                    </tr>
+                    <tr>
+                        <th  style="text-align: left">
+                            <span style="font-size: 15px">姓名</span>
+                        </th>
+                        <td ><input type="text"  class="form-control" style="height: 40px" ng-model="selectedLine.true_name"></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left">
+                            <span style="font-size: 15px">修改Setting权限</span>
+                        </th>
+                        <td ><input type="checkbox"  ng-model="selectedLine.see_setting" style="margin-left: 10px"></td>
+                    </tr>
+                </table>
+                {% endverbatim %}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" style="width: 80px"  data-dismiss="modal" ng-click="close()">关闭</button>
+                <button type="button" class="btn btn-primary" style="width: 80px" ng-click="update()">保存</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 模态框（Modal）add -->
+<div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog" style="width: 500px">
+        <div class="modal-content">
+            <div class="modal-body">
+                {% verbatim %}
+                <table id="table" class="spec">
+                    <tr>
+                        <th style="text-align: left">
+                            <span style="font-size: 15px">用户名</span>
+                        </th>
+                        <td ><input type="text" id="add_username" class="form-control" style="height: 40px" ng-model="user.username"></td>
+                    </tr>
+                    <tr>
+                        <th  style="text-align: left">
+                            <span style="font-size: 15px">密码</span>
+                        </th>
+                        <td ><input type="text" id="add_password" class="form-control" style="height: 40px" ng-model="user.password"></td>
+                    </tr>
+                    <tr>
+                        <th  style="text-align: left">
+                            <span style="font-size: 15px">姓名</span>
+                        </th>
+                        <td ><input type="text" id="add_true_name" class="form-control" style="height: 40px" ng-model="user.true_name"></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left">
+                            <span style="font-size: 15px">修改Setting权限</span>
+                        </th>
+                        <td ><input type="checkbox" id="add_see_setting" ng-model="user.see_setting" style="margin-left: 10px"></td>
+                    </tr>
+                </table>
+                {% endverbatim %}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" style="width: 80px"  data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" style="width: 80px" ng-click="add()">保存</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!--changePwd model-->
+<div class="modal fade" id="passwordModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header header_height" style="background-color: #3C8DBC">
+                <button type="button" class="close text-color" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"><span style="color: #FFFFFF">修改密码</span></h4>
+            </div>
+            <div class="modal-body" id="passwordNum">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form id="form" class="form-horizontal form" role="form" method="post">
+                            <table class="table table-bordered">
+                                <tbody>
+                                <tr>
+                                    <th width="20%">*原密码：</th>
+                                    <td width="80%">
+                                        <input type="password" style="width: 455px;height: 30px" class="form-control"  id="oldpassword">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="20%">*新密码：</th>
+                                    <td width="80%">
+                                        <input type="password" style="width: 455px;height: 30px" class="form-control" id="newpassword">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="20%">*重复新密码：</th>
+                                    <td width="80%">
+                                        <input type="password" style="width: 455px;height: 30px" class="form-control" id="r_newpassword">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary" ng-click="savePassword()">
+                    保存
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="loading" hidden="hidden" class="loading">Loading pages...</div>
+<!-- ./wrapper -->
+<!-- jQuery 3 -->
+<script src="../static/sources/js/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../static/sources/js/bootstrap.js"></script>
+<!-- AdminLTE App -->
+<script src="../static/sources/js/adminlte.js"></script>
+<!-- Bootstarp table -->
+<script src="../static/sources/js/bootstrap-table.js"></script>
+<!-- AngularJS -->
+<script src="../static/sources/js/angular.js"></script>
+<!-- Toastr -->
+<script src="../static/sources/js/toastr.js"></script>
+<!-- BasicTable -->
+<script src="../static/sources/js/jquery.basictable.js"></script>
+<!-- datatables -->
+<script src="../static/sources/js/datatables.js"></script>
+{#<!-- Setting.js -->#}
+<script src="../static/js/user.js"></script>
+<script>
+    toastr.options.positionClass = 'toast-top-center';
+</script>
+</body>
+</html>

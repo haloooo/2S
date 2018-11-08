@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HomePage</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../static/sources/css/bootstrap/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../static/sources/css/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../static/sources/css/Ionicons/ionicons.min.css">
+    <!-- basictable -->
+    <link rel="stylesheet" href="../static/sources/css/basictable/basictable.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../static/sources/css/dist/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../static/sources/css/dist/_all-skins.css">
+    <!-- toastr -->
+    <link rel="stylesheet" href="../static/sources/css/toastr/toastr.css">
+    <!-- style -->
+    <link rel="stylesheet" href="../static/sources/css/basictable/style.css">
+    <style>
+        .header_height{
+            height: 50px;
+            background-color: #3C8DBC;
+        }
+        .text-color{
+            color: #FFFFFF;
+        }
+        .text-location{
+            padding-top: 6px;
+        }
+        #btn{
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            border: none
+        }
+        @keyframes twinkle_red{
+            from{background: #EE9572;}
+            to{background: #EE3B3B;}
+        }
+        @keyframes twinkle_yellow{
+            from{background: #FFFF00;}
+            to{background: #EE7600;}
+        }
+        @keyframes twinkle_green{
+            from{background: #32CD32;}
+            to{background: #228B22;}
+        }
+
+        @-webkit-keyframes twinkling{
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        td{
+            border: 1px solid black;
+        }
+
+        th{
+            border: 1px solid black;
+        }
+
+        tr {
+            border: 1px solid black;
+        }
+        .loading{
+            width:160px;
+            height:56px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            line-height:56px;
+            color:#fff;
+            padding-left:60px;
+            font-size:15px;
+            background: #000 url(../static/sources/images/ajax-loader.gif) no-repeat 10px 50%;
+            opacity: 0.7;
+            z-index:9999;
+            -moz-border-radius:20px;
+            -webkit-border-radius:20px;
+            border-radius:20px;
+            filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+        }
+        .a{
+            width:120px;
+            height:120px;
+            position:relative;
+        }
+
+        .c span{
+            display: block;
+            padding-top: 50%;
+            text-align: center;
+            z-index: 5;
+            position: absolute;
+            top:0px;
+            left: 0px;
+            width: 100%;
+            color: #fff;
+        }
+
+        .d{
+            position: absolute;
+            top:0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+        {#background:black;#}
+            opacity: 1;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini" ng-app="AppHomePage">
+<div class="wrapper">
+    <header class="main-header">
+        <!-- Logo -->
+        <div class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini">Nidec</span>
+            <!-- logo for regular state and mobile devices -->
+            <img src="../static/sources/images/nidec.png">
+        </div>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <!-- Sidebar toggle button-->
+            <div class="navbar-title" style="width: 99%; position: absolute;z-index: -100">
+                <div align="center" style="vertical-align: center" ng-cloak>
+                    <span style="font-size: 30px;color: #ffffff" id="display_title">RealTime Monitor System</span>
+                </div>
+            </div>
+            <!-- Sidebar toggle button-->
+            {% verbatim %}
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- Control Sidebar Toggle Button -->
+                    <li class="dropdown user user-menu">
+                        <a style="cursor: pointer" data-toggle="modal" data-target="#myModal" data-toggle="control-sidebar">
+                            <i class="fa fa-sun-o"></i><span class="hidden-xs">setting</span>
+                        </a>
+                    </li>
+                    <li class="dropdown user user-menu">
+                        <a style="cursor: pointer" ng-click="showMenu()">
+                            <i class="fa fa-user"></i>
+                            <span class="hidden-xs" ng-cloak>{{ user_name }}</span>
+                        </a>
+                        <ul class="dropdown-menu" style="width: 80px; text-align: left" id="show_menu">
+                            <li class="user-footer">
+                                <a ng-click="showPassword()" id="logout" class="btn btn-default">
+                                    修改密码
+                                </a>
+                                <a ng-click="logout()" id="logout" class="btn btn-default" style="margin-top: 10px">
+                                    注销
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            {% endverbatim %}
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu" data-widget="tree">
+                <li class="active"><a href="go_homePage"><i class="fa fa-bookmark"></i> <span>HomePage</span></a></li>
+                <li id="go_setting" style="display: none"><a href="go_setting"><i class="fa fa-cog"></i> <span>Setting</span></a></li>
+                <li id="go_user" style="display: none"><a href="go_user"><i class="fa fa-user"></i> <span>User</span></a></li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        {% verbatim %}
+        <section class="content">
+            <div>
+                <span>ITEM : {{ showDataType }}</span><br>
+                <span>INSPECTION PROCESS : {{ showProcess }}</span>
+            </div>
+            <div align="right" style="padding-bottom: 20px;padding-right: 60px">
+                <span>Auto Updating(second) : </span>
+                <select ng-change="changeUpdate()" style="width:120px" ng-model="selectedAutoUpdate" ng-options="item for item in auto_update">
+                </select><br>
+            </div>
+            <div align="right" style="padding-right: 104px">
+                <span ng-if="PROCESS_type=='Yield'">Process Alart　Yellow:{{ PROCESS_YIELD[0] }}% Red:{{ PROCESS_YIELD[1] }}%</span>
+                <span ng-if="PROCESS_type=='NG COUNT'">Process Alart　Yellow:{{ PROCESS_YIELD[0] }} Red:{{ PROCESS_YIELD[1] }}</span>
+                <br>
+                <span>Last {{ INTERVAL }} hour</span>
+            </div>
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <div class="col-xs-5 col-sm-6 col-md-3" style="padding: 5px;color: #fff;border:none" align="center" ng-repeat="item in line">
+                    <div class='a' ng-click="go_WarningDetail(item,JIG_COUNT[$index],IN_COUNT[$index],YIELD[$index])">
+                        <div class='c' ng-style="lineColor_(IN_COUNT[$index])">
+                            <span>{{ item }}</span>
+                        </div>
+                        <div class='d' ng-style="linesColor(item,JIG_COUNT[$index],IN_COUNT[$index],YIELD[$index])"></div>
+                    </div>
+                    <div style="text-align: center">
+                        <span style="color: #2c2c2c;font-weight:bold;font-size:15px ">NG:</span>
+                        <span style="color: #2c2c2c;font-weight:normal;font-size: 15px">{{ JIG_COUNT[$index] }}</span>
+                        <span style="color: #2c2c2c;font-weight:bold;font-size: 15px">IN:</span>
+                        <span style="color: #2c2c2c;font-weight:normal;font-size: 15px">{{ IN_COUNT[$index] }}</span>
+                        <span style="color: #2c2c2c;font-weight:bold;font-size: 15px">Yield:</span>
+                        <span style="color: #2c2c2c;font-weight:normal;font-size: 15px">{{ YIELD[$index] }}%</span>
+                    </div>
+                    <div style="text-align: center">
+                        <span style="color: #2c2c2c;font-weight:bold;font-size: 15px">Green:</span>
+                        <span style="color: #00FF00;font-weight:normal;font-size: 15px">{{ GREEN[$index] }}</span>
+                        <span style="color: #2c2c2c;font-weight:bold;font-size: 15px">Yellow:</span>
+                        <span style="color: #FF8C00;font-weight:normal;font-size: 15px">{{ YELLOW[$index] }}</span>
+                        <span style="color: #2c2c2c;font-weight:bold;font-size: 15px">Red:</span>
+                        <span style="color: #FF0000;font-weight:normal;font-size: 15px">{{ RED[$index] }}</span>
+                    </div>
+                </div>
+                {% endverbatim %}
+            </div>
+            <div>
+                <table id="table">
+                    <thead>
+                    <tr>
+                        <th class="col-lg-2" style="cursor: pointer" ng-click="show_line();col='line_cd';desc=!desc">
+                            <span style="font-size: 15px">Line</span>
+                            <img id="Line1" src="../static/sources/images/ios7-arrow-down.png" style="height: 20px;width: 15px" alt="">
+                            <img id="Line2" src="../static/sources/images/ios7-arrow-up.png" style="height: 20px;width: 15px" alt="">
+                        </th>
+                        <th class="col-lg-2" style="cursor: pointer" ng-click="show_jig();col='station_slot';desc=!desc">
+                            <span style="font-size: 15px">JIG</span>
+                            <img id="JIG1" src="../static/sources/images/ios7-arrow-down.png" style="height: 20px;width: 15px" alt="">
+                            <img id="JIG2" src="../static/sources/images/ios7-arrow-up.png" style="height: 20px;width: 15px" alt="">
+                        </th>
+                        <th class="col-lg-2" style="cursor: pointer" ng-click="show_ng_count();col='ng_count';desc=!desc">
+                            <span style="font-size: 15px">NG Count</span>
+                            <img id="NG_count1" src="../static/sources/images/ios7-arrow-down.png" style="height: 20px;width: 15px" alt="">
+                            <img id="NG_count2" src="../static/sources/images/ios7-arrow-up.png" style="height: 20px;width: 15px" alt="">
+                        </th>
+                        <th class="col-lg-2" style="cursor: pointer" ng-click="show_in();col='in';desc=!desc">
+                            <span style="font-size: 15px">IN</span>
+                            <img id="In1" src="../static/sources/images/ios7-arrow-down.png" style="height: 20px;width: 15px" alt="">
+                            <img id="In2" src="../static/sources/images/ios7-arrow-up.png" style="height: 20px;width: 15px" alt="">
+                        </th>
+                        <th class="col-lg-2" style="cursor: pointer" ng-click="show_yield();col='yield';desc=!desc">
+                            <span style="font-size: 15px">Yield</span>
+                            <img id="Yield1" src="../static/sources/images/ios7-arrow-down.png" style="height: 20px;width: 15px" alt="">
+                            <img id="Yield2" src="../static/sources/images/ios7-arrow-up.png" style="height: 20px;width: 15px" alt="">
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {#                    {% verbatim %}#}
+                    {#                    <tr ng-repeat="item in dataList | orderBy:col:desc">#}
+                    {#                        <td ><span style="font-size: 15px">{{ item.line_cd }}</span></td>#}
+                    {#                        <td><span style="font-size: 15px">{{ item.station_slot }}</span></td>#}
+                    {#                        <td style="cursor: pointer">#}
+                    {#                            <a ng-click="go_serialDetail(selectedModel,selectedProcess,selectedDataType,item.line_cd,item.station_slot,item.ng_count,item.in,item.yield)">#}
+                    {#                                <span ng-style="JIGColor(item.ng_count,item.yield)" style="font-size: 15px">{{ item.ng_count }}</span>#}
+                    {#                            </a>#}
+                    {#                        </td>#}
+                    {#                        <td ><span style="font-size: 15px;color: #2c2c2c">{{ item.in }}</span></td>#}
+                    {#                        <td ><span style="font-size: 15px;color: #2c2c2c">{{ item.yield }}%</span></td>#}
+                    {#                    </tr>#}
+                    {#                    {% endverbatim %}#}
+
+                    {% verbatim %}
+                    <tr ng-repeat="item in dataList | orderBy:col:desc">
+                        <td><span style="font-size: 15px" ng-bind="item.line_cd"></span></td>
+                        <td><span style="font-size: 15px" ng-bind="item.station_slot"></span></td>
+                        <td style="cursor: pointer" ng-click="go_serialDetail(selectedModel,selectedProcess,selectedDataType,item.line_cd,item.station_slot)">
+                            <span ng-style="JIGColor(item.ng_count,item.yield)" style="font-size: 15px" ng-bind="item.ng_count"></span>
+                        </td>
+                        <td ><span style="font-size: 15px;color: #2c2c2c" ng-bind="item.in"></span></td>
+                        <td ><span style="font-size: 15px;color: #2c2c2c" ng-bind="item.yield"></span>%</td>
+                    </tr>
+                    {% endverbatim %}
+                    </tbody>
+                </table>
+            </div>
+            <!--config model-->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header header_height">
+                            <button type="button" class="close text-color" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel"><span class="text-color">Config</span></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                </div>
+                                <div class="col-sm-2 text-location">
+                                    <span>Model</span>
+                                </div>
+                                <div class="col-sm-5" style="padding-top: 4px">
+                                    <select class="form-control input-sm" ng-model="selectedModel" ng-change="modelChange()"  ng-options="item for item in models">
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                </div>
+                                <div class="col-sm-2 text-location">
+                                    <span>Process</span>
+                                </div>
+                                <div class="col-sm-5" style="padding-top: 4px">
+                                    <select class="form-control input-sm" ng-model="selectedProcess" ng-change="processChange()" ng-options="item for item in process">
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                </div>
+                                <div class="col-sm-2 text-location">
+                                    <span>Data_type</span>
+                                </div>
+                                <div class="col-sm-5" style="padding-top: 4px">
+                                    <select class="form-control input-sm" ng-model="selectedDataType"  ng-options="item for item in dataType">
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" ng-click="do_homePage()">OK</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+
+            <!--changePwd model-->
+            <div class="modal fade" id="passwordModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header header_height">
+                            <button type="button" class="close text-color" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel"><span class="text-color">修改密码</span></h4>
+                        </div>
+                        <div class="modal-body" id="passwordNum">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form id="form" class="form-horizontal form" role="form" method="post">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                            <tr>
+                                                <th width="20%">*原密码：</th>
+                                                <td width="80%">
+                                                    <input type="password" style="width: 455px;height: 30px" class="form-control"  id="oldpassword">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th width="20%">*新密码：</th>
+                                                <td width="80%">
+                                                    <input type="password" style="width: 455px;height: 30px" class="form-control" id="newpassword">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th width="20%">*重复新密码：</th>
+                                                <td width="80%">
+                                                    <input type="password" style="width: 455px;height: 30px" class="form-control" id="r_newpassword">
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default"
+                                    data-dismiss="modal">关闭
+                            </button>
+                            <button type="button" class="btn btn-primary" ng-click="savePassword()">
+                                保存
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+</div>
+<div id="loading" hidden="hidden" class="loading">Loading pages...</div>
+<!-- ./wrapper -->
+<!-- jQuery 3 -->
+<script src="../static/sources/js/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../static/sources/js/bootstrap.js"></script>
+<!-- AdminLTE App -->
+<script src="../static/sources/js/adminlte.js"></script>
+<!-- Bootstarp table -->
+<script src="../static/sources/js/bootstrap-table.js"></script>
+<!-- AngularJS -->
+<script src="../static/sources/js/angular.js"></script>
+<!-- Toastr -->
+<script src="../static/sources/js/toastr.js"></script>
+<!-- BasicTable -->
+<script src="../static/sources/js/jquery.basictable.js"></script>
+<!-- datatables -->
+<script src="../static/sources/js/datatables.js"></script>
+<!-- homePage.js -->
+<script src="../static/js/homePage.js"></script>
+<script>
+    toastr.options.positionClass = 'toast-top-center';
+</script>
+</body>
+</html>

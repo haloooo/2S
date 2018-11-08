@@ -1,0 +1,25 @@
+{
+  "database":[
+    {
+      "MODEL": "kk07",
+      "ENGINE": "django.db.backends.postgresql_psycopg2",
+      "NAME": "pqm_aoi_kk07",
+      "USER": "pqm",
+      "PASSWORD": "dbuser",
+      "HOST": "10.107.171.101",
+      "PORT": "5432",
+      "LINE":["L01","L02","L03","L04","L05","L06","L07","L08","L09","L10","L11","L12"]
+    },
+    {
+      "MODEL": "kk08",
+      "ENGINE": "django.db.backends.postgresql_psycopg2",
+      "NAME": "pqm_aoi_kk07",
+      "USER": "pqm",
+      "PASSWORD": "dbuser",
+      "HOST": "10.107.171.101",
+      "PORT": "5432",
+      "LINE":["L01","L02","L03","L04","L05","L06","L07","L08","L09","L10","L11","L12"]
+    }],
+  "auto_updating":[5,10,30],
+  "hour_interval":2
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Serial Detail</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../static/sources/css/bootstrap/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../static/sources/css/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../static/sources/css/Ionicons/ionicons.min.css">
+    <!-- basictable -->
+    <link rel="stylesheet" href="../static/sources/css/basictable/basictable.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../static/sources/css/dist/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../static/sources/css/dist/_all-skins.css">
+    <!-- toastr -->
+    <link rel="stylesheet" href="../static/sources/css/toastr/toastr.css">
+    <!-- style -->
+    <link rel="stylesheet" href="../static/sources/css/basictable/style.css">
+    <style>
+        .header_height{
+            height: 50px;
+            background-color: #3C8DBC;
+        }
+        .text-color{
+            color: #FFFFFF;
+        }
+        .text-location{
+            padding-top: 6px;
+        }
+        @keyframes twinkle{
+            from{background: #ff5500;}
+            to{background: #FF0000;}
+        }
+        td{
+            border: 1px solid black;
+        }
+        th{
+            border: 1px solid black;
+        }
+        tr {
+            border: 1px solid black;
+        }
+        .loading{
+            width:160px;
+            height:56px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            line-height:56px;
+            color:#fff;
+            padding-left:60px;
+            font-size:15px;
+            background: #000 url(../static/sources/images/ajax-loader.gif) no-repeat 10px 50%;
+            opacity: 0.7;
+            z-index:9999;
+            -moz-border-radius:20px;
+            -webkit-border-radius:20px;
+            border-radius:20px;
+            filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+        }
+
+    </style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini" ng-app="AppSerialDetail">
+<div class="wrapper">
+    <header class="main-header">
+        <!-- Logo -->
+        <div class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini">Nidec</span>
+            <!-- logo for regular state and mobile devices -->
+            <img src="../static/sources/images/nidec.png">
+        </div>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+
+            {% verbatim %}
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a style="cursor: pointer" ng-click="showMenu()">
+                            <i class="fa fa-user"></i>
+                            <span class="hidden-xs" ng-cloak>{{ user_name }}</span>
+                        </a>
+                        <ul class="dropdown-menu" style="width: 80px; text-align: left" id="show_menu">
+                            <li class="user-footer">
+                                <a ng-click="showPassword()" id="logout" class="btn btn-default">
+                                    修改密码
+                                </a>
+                                <a ng-click="logout()" id="logout" class="btn btn-default" style="margin-top: 10px">
+                                    注销
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            {% endverbatim %}
+        </nav>
+    </header>
+    {% verbatim %}
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu" data-widget="tree">
+                <li class="active"><a href="go_homePage?model_name={{ model_name }}&process_cd={{ process_cd }}&datatype_id={{ datatype_id }}"><i class="fa fa-bookmark"></i> <span>HomePage</span></a></li>
+                <li id="go_setting" style="display: none"><a href="go_setting"><i class="fa fa-cog"></i> <span>Setting</span></a></li>
+                <li id="go_user" style="display: none"><a href="go_user"><i class="fa fa-user"></i> <span>User</span></a></li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <!-- Content Wrapper. Contains page content -->
+
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content">
+            <div style="position: fixed;">
+                <span style="font-size: 18px">Line : {{ line_cd }}</span><br>
+                <span style="font-size: 18px">JIG : {{ station_slot }}</span><br>
+                <span style="font-size: 18px">NG : {{ ng_count }} IN : {{ in_count }} Yield : {{ yield_ }}%</span>
+            </div>
+            <div style="text-align: center"><h1 style="color: #333;font-size: 34px;font-weight: 400">Serial Detail</h1></div>
+            <!-- Small boxes (Stat box) -->
+            <div>
+                <table id="table">
+                    <thead>
+                    <tr>
+                        <th class="col-lg-4" style="text-align: center"><span style="font-size: 15px">SERIAL CODE</span></th>
+                        <th class="col-lg-4" style="text-align: center"><span style="font-size: 15px">DATE</span></th>
+                        <th class="col-lg-4" style="text-align: center"><span style="font-size: 15px">INSPECT NG COUNT</span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="item in serialList">
+                        <td style="text-align: center"><span style="font-size: 15px">{{ item.serial_cd }}</span></td>
+                        <td style="text-align: center"><span style="font-size: 15px">{{ item.process_at }}</span></td>
+                        <td style="cursor: pointer;color: #00a7d0;text-align: center" ng-click="showInspect(item.serial_cd)"><span style="font-size: 15px">{{ item.ng_count }}</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Inspect Detail model -->
+            <div class="modal fade" id="InspectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header header_height">
+                            <button type="button" class="close text-color" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel"><span class="text-color">Inspect</span></h4>
+                        </div>
+                        <div class="modal-body"  style="height: 500px;overflow: scroll">
+                            <div style="font-size: 17px">{{ serial_code }}</div>
+                            <table id="table">
+                                <thead>
+                                <tr>
+                                    <th class="col-lg-4" style="text-align: center"><span style="font-size: 15px">INSPECT CODE</span></th>
+                                    <th class="col-lg-4" style="text-align: center"><span style="font-size: 15px">INSPECT TEXT</span></th>
+                                    <th class="col-lg-4" style="text-align: center"><span style="font-size: 15px">JUDGE TEXT</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="item in inspect track by $index">
+                                    <td style="text-align: center"><span style="font-size: 15px">{{ item.inspect_code }}</span></td>
+                                    <td style="text-align: center"><span style="font-size: 15px">{{ item.inspect }}</span></td>
+                                    <td style="text-align: center"><span style="font-size: 15px">{{ item.judge_text }}</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+
+            <!--config model-->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header header_height">
+                            <button type="button" class="close text-color" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel"><span class="text-color">Config</span></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                </div>
+                                <div class="col-sm-2 text-location">
+                                    <span>Model</span>
+                                </div>
+                                <div class="col-sm-5" style="padding-top: 4px">
+                                    <select class="form-control input-sm" ng-model="selectedModel" ng-change="modelChnage()"  ng-options="item for item in models">
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                </div>
+                                <div class="col-sm-2 text-location">
+                                    <span>Process</span>
+                                </div>
+                                <div class="col-sm-5" style="padding-top: 4px">
+                                    <select class="form-control input-sm" ng-model="selectedProcess"  ng-options="item for item in process">
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                </div>
+                                <div class="col-sm-2 text-location">
+                                    <span>Data_type</span>
+                                </div>
+                                <div class="col-sm-5" style="padding-top: 4px">
+                                    <select class="form-control input-sm" ng-model="selectedDataType"  ng-options="item for item in dataType">
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" ng-click="do_homePage()">OK</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    {% endverbatim %}
+    <!-- /.content-wrapper -->
+</div>
+<div id="loading" hidden="hidden" class="loading">Loading pages...</div>
+
+<!--changePwd model-->
+<div class="modal fade" id="passwordModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header header_height">
+                <button type="button" class="close text-color" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"><span class="text-color">修改密码</span></h4>
+            </div>
+            <div class="modal-body" id="passwordNum">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form id="form" class="form-horizontal form" role="form" method="post">
+                            <table class="table table-bordered">
+                                <tbody>
+                                <tr>
+                                    <th width="20%">*原密码：</th>
+                                    <td width="80%">
+                                        <input type="password" style="width: 455px;height: 30px" class="form-control"  id="oldpassword">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="20%">*新密码：</th>
+                                    <td width="80%">
+                                        <input type="password" style="width: 455px;height: 30px" class="form-control" id="newpassword">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="20%">*重复新密码：</th>
+                                    <td width="80%">
+                                        <input type="password" style="width: 455px;height: 30px" class="form-control" id="r_newpassword">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary" ng-click="savePassword()">
+                    保存
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ./wrapper -->
+<!-- jQuery 3 -->
+<script src="../static/sources/js/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../static/sources/js/bootstrap.js"></script>
+<!-- AdminLTE App -->
+<script src="../static/sources/js/adminlte.min.js"></script>
+<!-- Bootstarp-table -->
+<script src="../static/sources/js/bootstrap-table.js"></script>
+<!-- HighChart -->
+<script src="../static/sources/js/highcharts.js"></script>
+<!-- AngularJS -->
+<script src="../static/sources/js/angular.js"></script>
+<!-- BasicTable -->
+<script src="../static/sources/js/jquery.basictable.js"></script>
+<!-- Toastr -->
+<script src="../static/sources/js/toastr.js"></script>
+<!-- serialDetail.js -->
+<script src="../static/js/serialDetail.js"></script>
+<script>
+    toastr.options.positionClass = 'toast-top-center';
+</script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+label.error {
+    color: red;
+}
+
+.navbar-title {
+    float: left;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.content {
+    background-color: #fff;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+table tbody tr td {
+    word-break: break-all;
+    font-size: 13px;
+}
+
+.box table tbody tr td {
+    /*white-space: nowrap;*/
+    border: 1px solid #ddd;
+}
+
+.box table thead tr th {
+    white-space: nowrap;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.box {
+    overflow-x: auto;
+    position: relative;
+    border-radius: 0;
+    border-top: none;
+    width: 100%;
+    box-shadow: inherit;
+    margin-bottom: 10px;
+}
+
+.table {
+    margin-bottom: 10px;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+.search-form {
+    margin-bottom: 20px;
+}
+
+.search-form table tbody tr td {
+    white-space: nowrap;
+    border: 1px dotted #ddd;
+    font-size: 13px;
+}
+
+.search-form table tbody tr th {
+    white-space: nowrap;
+    background-color: #eee;
+    border: 1px dotted #ddd;
+    text-align: right;
+    font-weight: 500;
+    line-height: 34px;
+    font-size: 13px;
+}
+
+.form table tbody tr td {
+    white-space: nowrap;
+    border: 1px dotted #ddd;
+    font-size: 13px;
+}
+
+.form table tbody tr th {
+    white-space: nowrap;
+    background-color: #eee;
+    border: 1px dotted #ddd;
+    text-align: right;
+    font-weight: 500;
+    line-height: 34px;
+    font-size: 13px;
+}
+
+.table-condensed > tbody > tr > td, .table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > td, .table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td, .table-condensed > thead > tr > th {
+    padding: 5px 0px;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.panel-body {
+    padding: 20px;
+}
+
+.select2-container--default .select2-selection--single,
+.select2-selection .select2-selection--single,
+.select2-container--default .select2-selection--multiple,
+.select2-selection .select2-selection--multiple {
+    border: 1px solid #d2d6de;
+    border-radius: 0;
+    height: 34px;
+    color: #555;
+}
+
+.ztree-slidedown {
+    margin-top: 10px;
+    border: 1px solid #617775;
+    background: #f0f6e4;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+.user-panel {
+    height: 40px;
+    font-weight: 600;
+    border-bottom: 2px solid #00b8d4;
+    text-align: center;
+}
+
+.no-background {
+    background: none;
+}
+
+.introduction {
+    color: #999;
+    line-height: 34px;
+}
+
+.fixed-tab-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 2059px) {
+    .fixed-tab-content {
+        max-height: 700px;
+    }
+}
+
+@media screen and (max-width: 1809px) {
+    .fixed-tab-content {
+        max-height: 600px;
+    }
+}
+
+@media screen and (max-width: 1559px) {
+    .fixed-tab-content {
+        max-height: 600px;
+    }
+}
+
+@media screen and (max-width: 1309px) {
+    .fixed-tab-content {
+        max-height: 600px;
+    }
+}
+
+@media screen and (max-width: 1059px) {
+    .fixed-tab-content {
+        max-height: 500px;
+    }
+}
+
+@media screen and (max-width: 809px) {
+    .fixed-tab-content {
+        max-height: 500px;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .fixed-tab-content {
+        max-height: 400px;
+    }
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.split-line {
+    width: 100%;
+    height: 2px;
+    margin: 10px 0;
+    overflow: hidden;
+    font-size: 0;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.width-130 {
+    width: 130px;
+}
+
+.width-140 {
+    width: 140px;
+}
+
+.padding-h-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.padding-left-40 {
+    padding-left: 40px;
+}
+
+.page_count {
+    width: 300px;
+    float: left;
+    margin-top: 25px
+}
+
+.page_change {
+    float: right;
+    margin-right: 10px
+}
+
+.noData {
+    text-align: center
+}
+
+.user-menu{
+    cursor: pointer;
+}
+
+
+
+
+

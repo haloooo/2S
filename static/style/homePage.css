@@ -1,0 +1,184 @@
+.chart_green {
+
+}
+
+.chart_olive {
+    animation: twinkle_olive 1s infinite;
+    animation-direction: alternate;
+}
+
+.chart_orange {
+    animation: twinkle_orange 1s infinite;
+    animation-direction: alternate;
+}
+
+.chart_red {
+    animation: twinkle_red 1s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes twinkle_red {
+    from {
+        background: #ffffff;
+    }
+    to {
+        background: #fa7f7f;
+    }
+}
+
+@keyframes twinkle_orange {
+    from {
+        background: #ffffff;
+    }
+    to {
+        background: #ffd890;
+    }
+}
+
+@keyframes twinkle_olive {
+    from {
+        background: #ffffff;
+    }
+    to {
+        background: #b2b1b1;
+    }
+}
+
+@keyframes twinkle_green {
+    from {
+        background: #ffffff;
+    }
+    to {
+        background: #228B22;
+    }
+}
+
+@-webkit-keyframes twinkling {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.warn_position {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-top: 1px;
+    animation: twinkle_warn_red 0.5s infinite;
+    animation-direction: alternate;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.normal_position {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-top: 1px;
+    animation: twinkle_warn_green 0.5s infinite;
+    animation-direction: alternate;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+@keyframes twinkle_warn_red {
+    from {
+        background: #f3e8e8;
+    }
+    to {
+        background: #de0b11;
+    }
+}
+
+@keyframes twinkle_warn_green {
+    from {
+        background: #f3e8e8;
+    }
+    to {
+        background: #00FF7F;
+    }
+}
+
+.warn_title {
+    float: left;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.assy_title {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 16px
+}
+
+
+
+.color_green {
+    background: #228B22
+}
+
+.color_olive {
+    background: #b2b1b1
+}
+
+.color_orange {
+    background: #ffd890
+}
+
+.color_red {
+    background: #ff0000;
+}
+
+.color_nodata {
+    background: #808080;
+}
+
+.assy_title_time {
+    font-weight: 500;
+    font-size: 12px
+}
+
+.select_date {
+    width: 150px;
+    float: left;
+    margin-right: 10px
+}
+
+.assy_table_div {
+    overflow: auto;
+}
+
+
+.table_time {
+    width: 85px;
+    background: #87ceeb;
+    text-align: center;
+    float: left;
+    height: 30px;
+    margin-right: 1px;
+    padding: 5px;
+    margin-bottom: 1px;
+}
+
+.assy_table_td {
+    width: 85px;
+    text-align: right;
+    color: white;
+    float: left;
+    height: 30px;
+    margin-right: 1px;
+    padding: 5px;
+    margin-bottom: 1px;
+}
+
+.assy_nodata{
+    height: 60px; width: 100%;text-align: center; line-height: 60px; padding-left: 10px;
+    border: 1px solid #dddddd;
+    font-weight: bold;
+}

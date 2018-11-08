@@ -1,0 +1,21 @@
+﻿Version 1.1 2018/8/13
+Support Function: 
+1.Overview of the whole frame
+
+Version 1.2 2018/9/7
+Support Function: 
+1.Refresh the front page
+
+Version 1.3 2018/9/13
+・	設定されているしきい値を表示	
+・	モニタリングの対象としている時間(直近何時間)を表示			
+・	Line名はランプの中							
+・	JIGとして表示しているの数字はNG数なのでJIG⇒NGに表記変更							
+・	各Lineでそれぞれの治具に対して閾値を超えているものが各アラートレベルに何個あるのかを表示								
+・	タイトルを中央に表示					
+・	JIGとNGのリスト表示はNGの多い治具順にソート				
+・	JIGとNGのリストにNG数だけではなくその治具が使われた総数(IN)とNGとINの数字を使ったYield(IN-NG/IN)							
+・	INやYield,JIG名でもソートできるように																			
+・	JIGに関しての閾値を超えたものにアラートの色分け(Detailでされているように。)														・	HomepageからDetailへのリンクは新しいタブで開く																		・	画面更新したら初期設定(Configの1番上の設定)に戻ってしまうのが困る。																					
+Version 1.4 2018/9/21
+1,Optimize SQl statement and speed up page display.

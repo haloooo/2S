@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>登录</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../static/sources/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../static/sources/css/bootstrap/css/elegant-icons-style.css">
+    <link rel="stylesheet" href="../static/sources/css/toastr/toastr.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" type="text/css" href="../static/style/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/style/style-responsive.css">
+</head>
+
+<body class="login-img3-body" ng-app="myApp" ng-controller="myCtrl">
+<div class="container">
+    <form class="login-form">
+        <div class="login-wrap">
+            <p class="login-img"><img src="../static/sources/images/sys-logo.png"  width="150" /></p>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_profile"></i></span>
+                <input type="text" class="form-control" placeholder="用户名" autofocus ng-model="username">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                <input type="password" class="form-control" placeholder="密码" ng-model="password">
+            </div>
+            <label class="checkbox">
+            </label>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" ng-click="submit()">登录</button>
+            <div style="height: 30px; width: 100%; text-align: center; margin-top: 20px">Power By Technopro China</div>
+        </div>
+    </form>
+    <div class="text-right">
+
+    </div>
+</div>
+</body>
+<script src="../static/sources/js/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../static/sources/js/bootstrap.js"></script>
+<!-- AdminLTE App -->
+<script src="../static/sources/js/adminlte.js"></script>
+<!-- Bootstarp table -->
+<script src="../static/sources/js/bootstrap-table.js"></script>
+<!-- AngularJS -->
+<script src="../static/sources/js/angular.js"></script>
+<!-- Toastr -->
+<script src="../static/sources/js/toastr.js"></script>
+<script src="../static/js/login.js"></script>
+<script>
+    toastr.options.positionClass = 'toast-top-center';
+</script>
+</html>

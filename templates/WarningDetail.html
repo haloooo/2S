@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Warning Detail</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../static/sources/css/bootstrap/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../static/sources/css/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../static/sources/css/Ionicons/ionicons.min.css">
+    <!-- basictable -->
+    <link rel="stylesheet" href="../static/sources/css/basictable/basictable.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../static/sources/css/dist/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../static/sources/css/dist/_all-skins.css">
+    <!-- toastr -->
+    <link rel="stylesheet" href="../static/sources/css/toastr/toastr.css">
+    <!-- style -->
+    <link rel="stylesheet" href="../static/sources/css/basictable/style.css">
+    <style>
+
+        @keyframes twinkle{
+            from{background: #ff5500;}
+            to{background: #FF0000;}
+        }
+
+        .loading{
+            width:160px;
+            height:56px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            line-height:56px;
+            color:#fff;
+            padding-left:60px;
+            font-size:15px;
+            background: #000 url(../static/sources/images/ajax-loader.gif) no-repeat 10px 50%;
+            opacity: 0.7;
+            z-index:9999;
+            -moz-border-radius:20px;
+            -webkit-border-radius:20px;
+            border-radius:20px;
+            filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+        }
+        .a{
+            width:120px;
+            height:120px;
+            position:relative;
+        }
+
+        .c span{
+            display: block;
+            padding-top: 50%;
+            text-align: center;
+            z-index: 5;
+            position: absolute;
+            top:0px;
+            left: 0px;
+            width: 100%;
+            color: #fff;
+        }
+
+        .d{
+            position: absolute;
+            top:0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+        {#background:black;#}
+            opacity: 1;
+            z-index: 3;
+        }
+        .spec tr td{
+            border: 1px solid #b5bbc8;
+            width: 100px;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini" ng-app="AppWarningDetail">
+<div class="wrapper">
+    <header class="main-header">
+        <!-- Logo -->
+        <div class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini">Nidec</span>
+            <!-- logo for regular state and mobile devices -->
+            <img src="../static/sources/images/nidec.png">
+        </div>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+
+            {% verbatim %}
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a style="cursor: pointer" ng-click="showMenu()">
+                            <i class="fa fa-user"></i>
+                            <span class="hidden-xs" ng-cloak>{{ user_name }}</span>
+                        </a>
+                        <ul class="dropdown-menu" style="width: 80px; text-align: left" id="show_menu">
+                            <li class="user-footer">
+                                <a ng-click="showPassword()" id="logout" class="btn btn-default">
+                                    修改密码
+                                </a>
+                                <a ng-click="logout()" id="logout" class="btn btn-default" style="margin-top: 10px">
+                                    注销
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            {% endverbatim %}
+
+        </nav>
+    </header>
+    {% verbatim %}
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu" data-widget="tree">
+                <li class="active"><a href="go_homePage?model_name={{ model_name }}&process_cd={{ process_cd }}&datatype_id={{ datatype_id }}"><i class="fa fa-bookmark"></i> <span>HomePage</span></a></li>
+                <li id="go_setting" style="display: none"><a href="go_setting"><i class="fa fa-cog"></i> <span>Setting</span></a></li>
+                <li id="go_user" style="display: none"><a href="go_user"><i class="fa fa-user"></i> <span>User</span></a></li>
+            </ul>
+        </section>
+
+
+        <!-- /.sidebar -->
+    </aside>
+    <!-- Content Wrapper. Contains page content -->
+
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content">
+            <div class="col-lg-4 col-sm-4 col-xs-4" align="left">
+                <div class='a' style="display: inline-block">
+                    <div class='c'>
+                        <span>{{ line_cd }}</span>
+                    </div>
+                    <div class='d' ng-style="linesColor(item,line_in,line_yield)"></div>
+                </div>
+                <div style="display: inline-block">
+                    <span>NG:{{ line_ng }}<br>IN:{{ line_in }}<br>Yield:{{ line_yield }}%</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-xs-4" align="center"><h1 style="color: #333;font-size: 34px;font-weight: 400">Warning Detail</h1></div>
+            <div class="col-lg-4 col-sm-4 col-xs-4" align="right" style="padding-top: 5px">
+                <table class="spec" style="width: 250px">
+                    <tr style="background-color: #ecf0f5">
+                        <td colspan="2" style="text-align: center">
+                            <span style="font-size: 14px" >JIG/Station Alart</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #ecf0f5">
+                            <span style="font-size: 12px">Yellow</span>
+                        </td>
+                        <td style="background-color: #ecf0f5;width: 75px">
+                            <span ng-if="JIG_type=='NG COUNT'" style="font-size: 12px">Over {{ JIG[0] }}</span>
+                            <span ng-if="JIG_type=='Yield'" style="font-size: 12px">Over {{ JIG[0] }}%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #ecf0f5">
+                            <span style="font-size: 12px">Red</span>
+                        </td >
+                        <td style="background-color: #ecf0f5">
+                            <span ng-if="JIG_type=='NG COUNT'" style="font-size: 12px">Over {{ JIG[1] }}</span>
+                            <span ng-if="JIG_type=='Yield'" style="font-size: 12px">Over {{ JIG[1] }}%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #ecf0f5">
+                            <span style="font-size: 12px">Item</span>
+                        </td>
+                        <td style="background-color: #ecf0f5">
+                            <span style="font-size: 12px">{{ datatype_id }}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #ecf0f5">
+                            <span style="font-size: 12px">Inspection process</span>
+                        </td>
+                        <td style="background-color: #ecf0f5">
+                            <span style="font-size: 12px">{{ process_cd }}</span>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <!-- Small boxes (Stat box) -->
+            <div id="assydiff">
+                <div id="bd">
+                    <div id="Content">
+                        <table id="table">
+                            <thead>
+                            <tr>
+                                <th class="col-lg-3" style="cursor: pointer" ng-click="show_JIG();col='station_slot';desc=!desc">
+                                    <span style="font-size: 15px">JIG</span>
+                                    <img id="JIG1" src="../static/sources/images/ios7-arrow-down.png" style="height: 20px;width: 15px" alt="">
+                                    <img id="JIG2" src="../static/sources/images/ios7-arrow-up.png" style="height: 20px;width: 15px" alt="">
+                                </th>
+                                <th class="col-lg-3" style="cursor: pointer" ng-click="show_NG_Count();col='ng_count';desc=!desc">
+                                    <span style="font-size: 15px">NG Count</span>
+                                    <img id="NG_Count1" src="../static/sources/images/ios7-arrow-down.png" style="height: 20px;width: 15px" alt="">
+                                    <img id="NG_Count2" src="../static/sources/images/ios7-arrow-up.png" style="height: 20px;width: 15px" alt="">
+                                </th>
+                                <th class="col-lg-3" style="cursor: pointer" ng-click="show_IN();col='in';desc=!desc">
+                                    <span style="font-size: 15px">IN</span>
+                                    <img id="IN1" src="../static/sources/images/ios7-arrow-down.png" style="height: 20px;width: 15px" alt="">
+                                    <img id="IN2" src="../static/sources/images/ios7-arrow-up.png" style="height: 20px;width: 15px" alt="">
+                                </th>
+                                <th class="col-lg-3" style="cursor: pointer" ng-click="show_Yield();col='yield';desc=!desc">
+                                    <span style="font-size: 15px">Yield</span>
+                                    <img id="Yield1" src="../static/sources/images/ios7-arrow-down.png" style="height: 20px;width: 15px" alt="">
+                                    <img id="Yield2" src="../static/sources/images/ios7-arrow-up.png" style="height: 20px;width: 15px" alt="">
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="item in ng_info | orderBy:col:desc">
+                                <td ng-style="JIGColor(item.ng_count,item.yield)"><span style="font-size: 15px">{{ item.station_slot }}</span></td>
+                                <!--<td ng-style="JIGColor(item.ng_count,item.yield)"><a href="go_serialDetail?model_name={{ model_name }}&process_cd={{ process_cd }}&datatype_id={{ datatype_id }}&line_cd={{ line_cd }}&station_slot={{ item.station_slot }}&start_time={{ start_time }}&end_time={{ end_time }}&ng_count={{ item.ng_count }}&in_count={{ item.in }}&yield_={{ item.yield }}"><span style="font-size: 15px;color: #3C8DBC">{{ item.ng_count }}</span></a></td> -->
+                                <td ng-style="JIGColor(item.ng_count,item.yield)"><a href="go_serialDetail?model_name={{ model_name }}&process_cd={{ process_cd }}&datatype_id={{ datatype_id }}&line_cd={{ line_cd }}&station_slot={{ item.station_slot }}&start_time={{ start_time }}&end_time={{ end_time }}&ng_count={{ item.ng_count }}&in_count={{ item.in }}&yield_={{ item.yield }}"><span style="font-size: 15px;color: #3C8DBC">{{ item.ng_count }}</span></a></td>
+                                <td ng-style="JIGColor(item.ng_count,item.yield)"><span style="font-size: 15px">{{ item.in }}</span></td>
+                                <td ng-style="JIGColor(item.ng_count,item.yield)"><span style="font-size: 15px">{{ item.yield }}%</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    {% endverbatim %}
+    <div id="loading" hidden="hidden" class="loading">Loading pages...</div>
+
+    <!--changePwd model-->
+    <div class="modal fade" id="passwordModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header header_height" style="background-color: #3C8DBC">
+                    <button type="button" class="close text-color" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel"><span style="color: #FFFFFF">修改密码</span></h4>
+                </div>
+                <div class="modal-body" id="passwordNum">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="form" class="form-horizontal form" role="form" method="post">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                    <tr>
+                                        <th width="20%">*原密码：</th>
+                                        <td width="80%">
+                                            <input type="password" style="width: 455px;height: 30px" class="form-control"  id="oldpassword">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th width="20%">*新密码：</th>
+                                        <td width="80%">
+                                            <input type="password" style="width: 455px;height: 30px" class="form-control" id="newpassword">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th width="20%">*重复新密码：</th>
+                                        <td width="80%">
+                                            <input type="password" style="width: 455px;height: 30px" class="form-control" id="r_newpassword">
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                            data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary" ng-click="savePassword()">
+                        保存
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- /.content-wrapper -->
+</div>
+<!-- ./wrapper -->
+<!-- jQuery 3 -->
+<script src="../static/sources/js/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../static/sources/js/bootstrap.js"></script>
+<!-- AdminLTE App -->
+<script src="../static/sources/js/adminlte.min.js"></script>
+<!-- Bootstarp-table -->
+<script src="../static/sources/js/bootstrap-table.js"></script>
+<!-- HighChart -->
+<script src="../static/sources/js/highcharts.js"></script>
+<!-- Toastr -->
+<script src="../static/sources/js/toastr.js"></script>
+<!-- AngularJS -->
+<script src="../static/sources/js/angular.js"></script>
+<!-- BasicTable -->
+<script src="../static/sources/js/jquery.basictable.js"></script>
+<!-- datatables -->
+<script src="../static/sources/js/datatables.js"></script>
+<script src="../static/js/warningDetail.js"></script>
+<script>
+    toastr.options.positionClass = 'toast-top-center';
+</script>
+</body>
+</html>
